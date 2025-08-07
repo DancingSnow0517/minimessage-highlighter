@@ -1,21 +1,64 @@
 {
   "name": "minimessage-highlighter",
   "displayName": "Minimessage Highlighter",
-  "description": "",
+  "description": "A VS Code extension for highlighting MiniMessage syntax and parsing JSON, TOML, and YAML text elements with position tracking",
   "version": "0.0.1",
+  "publisher": "minimessage-highlighter",
+  "author": {
+    "name": "DancingSnow",
+    "email": "1121149616@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DancingSnow0517/minimessage-highlighter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DancingSnow0517/minimessage-highlighter/issues"
+  },
+  "homepage": "https://github.com/DancingSnow0517/minimessage-highlighter#readme",
+  "keywords": [
+    "vscode",
+    "extension",
+    "minimessage",
+    "json",
+    "toml",
+    "yaml",
+    "parser",
+    "syntax-highlighting"
+  ],
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "DancingSnow",
+      "email": "1121149616@qq.com"
+    }
+  ],
   "engines": {
     "vscode": "^1.102.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onLanguage:json",
+    "onLanguage:toml", 
+    "onLanguage:yaml"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "minimessage-highlighter.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "minimessage-highlighter.testJsonParser",
+        "title": "Test JSON Parser"
       }
     ]
   },
